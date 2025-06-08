@@ -15,7 +15,8 @@
     <div class="logo">Olivier</div>
     <!-- Mobile nav toggle button -->
     <button class="nav-toggle" id="nav-toggle">&#9776;</button>
-    <nav id="nav">
+    <!-- Navigation Overlay for Mobile -->
+    <nav id="nav" class="nav-overlay">
       <ul class="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about-me">About Me</a></li>
@@ -145,15 +146,27 @@
     </div>
   </div>
 
-  <!-- Contact Section -->
+  <!-- Contact Section (wrapped in a box) -->
   <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Please reach out for more information.</p>
+    <div class="box contact-box">
+      <h2>Get In Touch</h2>
+      <p>
+        If you have any questions or would like to collaborate, please reach out using one of the methods below.
+      </p>
+      <div class="contact-buttons">
+        <button class="contact-btn phone-btn" onclick="window.location.href='tel:+250786522150';">
+          Phone
+        </button>
+        <button class="contact-btn email-btn" onclick="window.open('mailto:o.dusabamah@alustudent.com', '_blank');">
+          Email Me
+        </button>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>This is a project for African Leadership University © 2025 Olivier Dusabamahoro</p>
+    <p>© 2025 Olivier Dusabamahoro</p>
   </footer>
 
   <!-- Include JS for toggling nav and dark mode -->
