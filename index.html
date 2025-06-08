@@ -1,58 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olivier's Journey</title>
-    <link rel="icon" type="image/png" href="icon.jpeg">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olivier's Journey</title>
+  <link rel="icon" type="image/png" href="icon.jpeg">
+  <!-- Import Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo">Olivier</div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li class="dropdown">
+          <a href="#what-i-want-to-do">What I want to do</a>
+          <ul class="dropdown-menu">
+            <li><a href="#journey">Entrepreneurial Journey</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#prototype">Prototype</a></li>
+            <li><a href="#reflection">Reflection</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#why">Why, How, What, Where</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Navigation Bar -->
-    <header>
-        <div class="logo">Olivier</div>
-        <nav>
-            <ul>
-                <li><a href="#">Homepage</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Home Section (Introduction) -->
+  <section id="home" class="home">
+    <div class="inline-box intro-box">
+      <h2>🌟 Introduction</h2>
+      <p>
+        "Welcome to my digital portfolio — a space where dreams meet purpose. My name is Olivier, and I come from Rwanda, a land full of potential and resilient communities. As a young African driven by innovation, I believe that we can solve our own challenges using local talent, smart thinking, and bold ideas.
+        <br><br>
+        This website is more than just a school project. It's the beginning of a lifelong mission to build impactful solutions using technology. Starting with healthcare drone delivery, my goal is to help Africa save more lives, create more jobs, and inspire more young minds.
+        <br><br>
+        Explore this platform to see how I’m using reflective thinking, entrepreneurial action, and future-focused design to build something meaningful for my community and continent."
+      </p>
+    </div>
+  </section>
 
-    <!-- Content Boxes -->
-    <div class="container">
-        <div class="box">
-            <h2>Homepage</h2>
-            <p>Welcome to my space where I share my journey and ideas.</p>
-        </div>
-        <div class="box">
-            <h2>Entrepreneurial Journey</h2>
-            <p>Explore the steps and decisions behind my business vision.</p>
-        </div>
-        <div class="box">
-            <h2>Solution</h2>
-            <p>Innovative solutions designed to address key challenges.</p>
-        </div>
-        <div class="box">
-            <h2>Prototype</h2>
-            <p>My hands-on approach to bringing ideas to reality.</p>
-        </div>
-        <div class="box">
-            <h2>Reflection</h2>
-            <p>Lessons learned and future improvements.</p>
-        </div>
-        <div class="box">
-            <h2>Conclusion</h2>
-            <p>A summary of my experience and impact.</p>
-        </div>
+  <!-- About Me Section -->
+  <section id="about-me" class="about-me">
+    <div class="inline-box about-me-box">
+      <div class="about-me-image">
+        <img src="Olivier.jpg" alt="Olivier">
+      </div>
+      <h2>About Me</h2>
+      <p>
+        My name is Olivier, a young visionary from Rwanda with a passion for using technology to solve real-world problems. I study at African Leadership University (ALU) and in Data Science at Alt School Africa. Growing up in communities where people face challenges accessing quick healthcare, I became motivated to change that. I believe Africa has the talent and potential to build our own solutions. That’s why I chose to focus on healthcare drones – not just for delivery, but to build systems that are owned, run, and improved by Africans for Africa.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section id="mission" class="mission">
+    <div class="inline-box mission-box">
+      <h2>Mission Statement</h2>
+      <p>
+        My mission is to use drone and smart technology to improve how healthcare is delivered across Africa, especially in remote areas. I want to help doctors and nurses get critical supplies like medicine, vaccines, and emergency tools faster. This way, we can save lives, create local jobs, and inspire young people to use technology to solve real problems.
+      </p>
+    </div>
+  </section>
+
+  <!-- What I want to do (Other Content Boxes) -->
+  <div class="container">
+    <!-- Box: Entrepreneurial Journey -->
+    <div class="box" id="journey">
+      <div class="box-image">
+        <img src="Journey1.jpeg" alt="Entrepreneurial Journey">
+      </div>
+      <h2>Entrepreneurial Journey</h2>
+      <p>
+        My journey started by observing rural challenges in healthcare. I noticed long waits & extensive travels for treatment, which led me to research and eventually pursue a healthcare drone delivery solution.
+      </p>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>This is week 9 Milestone as part of submission and done by Olivier Dusabamahoro</p>
-    </footer>
+    <!-- Box: Solution -->
+    <div class="box" id="solution">
+      <div class="box-image">
+        <img src="Sol3.jpeg" alt="Solution">
+      </div>
+      <h2>Solution</h2>
+      <p>
+        I’m developing a smart drone system to deliver essential healthcare items quickly – from medicines and vaccines to diagnostic samples and emergency kits.
+      </p>
+    </div>
+
+    <!-- Box: Prototype -->
+    <div class="box" id="prototype">
+      <div class="box-image">
+        <img src="Prototype.jpeg" alt="Prototype">
+      </div>
+      <h2>Prototype</h2>
+      <p>
+        Working with online tools and simulations, I am crafting a drone model and developing software to manage efficient delivery routes for critical healthcare supplies.
+      </p>
+    </div>
+
+    <!-- Box: Reflection -->
+    <div class="box" id="reflection">
+      <div class="box-image">
+        <img src="Reflection.jpeg" alt="Reflection">
+      </div>
+      <h2>Reflection</h2>
+      <p>
+        Although this project remains in its conceptual stages, it has already inspired me to explore how simple ideas can drive innovation. As a student at African Leadership University, I am continuously learning and building the foundations of this solution. I am committed to refining and realizing this project over the next three to five years as I work to connect technology with the ever-evolving needs of our communities.
+      </p>
+    </div>
+
+    <!-- Box: Conclusion -->
+    <div class="box" id="conclusion">
+      <div class="box-image">
+        <img src="Conclusion.jpeg" alt="Conclusion">
+      </div>
+      <h2>Conclusion</h2>
+      <p>
+        My dream is a future where every community receives efficient healthcare. Drones may be the key to this transformation.
+      </p>
+    </div>
+
+    <!-- Box: Why, How, What, Where -->
+    <div class="box" id="why">
+      <div class="box-image">
+        <img src="Why, How, What, Where.jpeg" alt="Why, How, What, Where">
+      </div>
+      <h2>Why, How, What, Where</h2>
+      <p><strong>Why:</strong> Many communities lack timely healthcare.</p>
+      <p><strong>How:</strong> With locally built drones and smart software.</p>
+      <p><strong>What:</strong> A delivery system for critical healthcare supplies.</p>
+      <p><strong>Where:</strong> Starting in Rwanda, expanding across Africa.</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Please reach out for more information.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>This is week 9 Milestone as part of submission and done by Olivier Dusabamahoro</p>
+  </footer>
 
 </body>
 </html>
