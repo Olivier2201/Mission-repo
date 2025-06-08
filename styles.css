@@ -159,7 +159,7 @@ header {
 
 .box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* Active state for boxes when selected */
@@ -336,6 +336,122 @@ footer p {
   display: block;
 }
 
+/* Mobile Responsive Navigation */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 70px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  /* A deep blue gradient resembling a night sky */
+  background: linear-gradient(to bottom, #1a1a2e, #16213e);
+  color: #f2f2f2;
+}
+
+/* Ensure all headings and text are clearly visible */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #ffffff;
+}
+body.dark-mode p,
+body.dark-mode small,
+body.dark-mode .small-text {
+  color: #f2f2f2;
+}
+
+/* Update inline boxes & boxes for dark mode */
+body.dark-mode .inline-box,
+body.dark-mode .box {
+  background-color: #24243e;  /* A slightly lighter dark for contrast */
+  color: #f2f2f2;
+  border-color: #666;
+  box-shadow: none;
+}
+
+/* Dark Mode Navigation Links */
+body.dark-mode .nav-menu a {
+  color: #f2f2f2;
+}
+body.dark-mode .nav-menu a:hover,
+body.dark-mode .nav-menu a.active {
+  color: #2ecc71;
+}
+
+/* Redesigned Dark Mode Toggle Button */
+.mode-toggle {
+  font-size: 20px;
+  background: #fff;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 20px;
+}
+
+body.dark-mode .mode-toggle {
+  background: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+/* Mode Toggle Button Hover & Animation */
+.mode-toggle {
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  margin-left: 20px;
+}
+
+.mode-toggle:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* Mobile menu animation - slide in/out */
+@media (max-width: 768px) {
+  .nav-menu {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .box {
@@ -360,3 +476,15 @@ footer p {
     width: 100%;
   }
 }
+
+/* JavaScript for Dark Mode Toggle */
+const modeToggle = document.getElementById('mode-toggle');
+modeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  // Switch the icon based on mode:
+  if (document.body.classList.contains('dark-mode')) {
+    modeToggle.textContent = '🌙';
+  } else {
+    modeToggle.textContent = '☀️';
+  }
+});
